@@ -13,4 +13,12 @@ class Client extends Model
     {
         return $this->hasMany('App\Models\Payment');
     }
+
+    /**
+     * Get the last payment for the client.
+     */
+    public function latestPayment()
+    {
+        return $this->hasOne('App\Models\Payment')->latest();
+    }
 }

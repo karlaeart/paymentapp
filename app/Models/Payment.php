@@ -11,6 +11,6 @@ class Payment extends Model
      */
     public function client()
     {
-        return $this->belongsTo('App\Models\Client', 'user_id');
+        return $this->belongsTo('App\Models\Client');
     }
 }

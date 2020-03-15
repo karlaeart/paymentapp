@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('clients', 'ClientController@getIndex');
+Route::post('clients', 'ClientController@postIndex');

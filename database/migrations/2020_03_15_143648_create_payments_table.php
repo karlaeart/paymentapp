@@ -15,11 +15,11 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('client_id');
+            $table->unsignedBigInteger('user_id');
             $table->integer('amount');
             $table->timestamps();
 
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('clients')->onDelete('cascade');
         });
     }
 
